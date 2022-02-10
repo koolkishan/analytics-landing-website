@@ -1,0 +1,184 @@
+.end-container {
+  clip-path: polygon(0 18%, 100% 0%, 100% 100%, 0% 100%);
+  height: 128vh;
+  background-color: var(--pink);
+  position: relative;
+  overflow-y: hidden;
+  .container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 126vh;
+    background-color: var(--primary-color);
+    clip-path: polygon(0 18%, 100% 0%, 100% 100%, 0% 100%);
+    padding: 0 10rem;
+    .backgrounds {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .pricing-plan {
+      z-index: 10;
+      margin-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        .title {
+          font-size: 2rem;
+          color: white;
+        }
+        .description {
+          padding: 0 20rem;
+          color: var(--secondary-color);
+          line-height: 1.5rem;
+        }
+      }
+      .pricing {
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+
+        .plan {
+          z-index: 10;
+
+          background-color: var(--card-color);
+          height: 22rem;
+          width: 20rem;
+          border-radius: 3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          text-align: center;
+          &:nth-of-type(2) {
+            background-color: white;
+            box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+            transform: translateY(-20px);
+            .plan-title {
+              h3 {
+                color: var(--primary-color);
+              }
+            }
+            .plan-price {
+              h1 {
+                color: var(--primary-color);
+              }
+            }
+            button {
+              border: none;
+              background-color: var(--pink);
+              color: white;
+            }
+          }
+          &-title {
+            h3 {
+              font-size: 2rem;
+              color: white;
+            }
+            h5 {
+              color: var(--secondary-color);
+            }
+          }
+          &-price {
+            h1 {
+              font-size: 3rem;
+              color: white;
+            }
+            h5 {
+              color: var(--secondary-color);
+            }
+          }
+          button {
+            color: white;
+            padding: 0.7rem 3.4rem;
+            border-radius: 2rem;
+            border: 3px solid var(--line);
+            background-color: transparent;
+            font-family: var(--font-family);
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    height: 145vh;
+    .container {
+      height: 143vh;
+      padding: 0 1rem;
+      .pricing-plan {
+        .title-container {
+          .description {
+            padding: 0 0.2rem;
+          }
+        }
+        .pricing {
+          width: 80vw;
+          overflow: auto;
+          display: flex;
+          justify-content: flex-start;
+          gap: 3rem;
+          padding-left: 2.4rem;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .plan {
+            height: 50vh;
+            padding: 0 2rem;
+            &:nth-of-type(2) {
+              transform: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid var(--line);
+  padding-top: 4rem;
+  .links {
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style-type: none;
+      li {
+        color: var(--secondary-color);
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .social {
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style-type: none;
+      li {
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    align-items: center;
+    .links {
+      display: none;
+    }
+  }
+}

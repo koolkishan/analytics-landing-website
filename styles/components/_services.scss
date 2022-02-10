@@ -1,0 +1,45 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 10rem 0;
+  padding: 0 10rem;
+  .service {
+    display: flex;
+    gap: 5rem;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      .title {
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+      .description {
+        color: var(--secondary-color);
+        line-height: 1.5rem;
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    padding: 0 1.3rem;
+    text-align: start;
+    .title-container {
+      .description {
+        padding: 0;
+      }
+    }
+    .service {
+      flex-direction: column;
+      .image {
+        img {
+          max-inline-size: 100%;
+        }
+      }
+      &:nth-of-type(2) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

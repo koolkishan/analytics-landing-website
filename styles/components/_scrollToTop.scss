@@ -1,0 +1,24 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 20;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.scroll-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.scroll-hidden {
+  visibility: hidden;
+  opacity: 0;
+}

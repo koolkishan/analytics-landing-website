@@ -1,0 +1,117 @@
+.home {
+  height: 102vh;
+  background-color: var(--pink);
+  clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
+  margin-bottom: 4rem;
+  .main-container {
+    height: 100vh;
+    position: relative;
+    background-color: var(--primary-color);
+    clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
+    padding: 2rem 10rem;
+    .backgrounds {
+      .background1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .background2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+      }
+    }
+    .home-container {
+      height: 100%;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 50%;
+        height: 90%;
+        justify-content: center;
+        .title-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          .home-title-image {
+            display: none;
+          }
+          .title {
+            color: white;
+            font-size: 3.5rem;
+          }
+          .description {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+          }
+        }
+        button {
+          color: white;
+          background-color: var(--pink);
+          padding: 0.7rem 3.4rem;
+          border-radius: 2rem;
+          border: none;
+          font-family: var(--font-family);
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    height: 140vh;
+    .main-container {
+      height: 138vh;
+      padding: 0rem;
+      .backgrounds {
+        display: none;
+      }
+      .home-container {
+        .content {
+          width: 100%;
+          height: max-content;
+          margin-top: 2rem;
+          padding: 1rem;
+          .title-container {
+            .home-title-image {
+              display: block;
+              max-inline-size: 100%;
+            }
+            .title {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-images {
+  position: absolute;
+  top: 15vh;
+  left: 55%;
+  .image-container {
+    position: relative;
+    .image1 {
+      position: absolute;
+      img {
+        max-inline-size: auto;
+      }
+    }
+    .image2 {
+      position: absolute;
+      top: 18vh;
+      left: -5vw;
+      img {
+        max-inline-size: auto;
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    display: none;
+  }
+}

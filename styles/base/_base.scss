@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+:root {
+  --primary-color: #172755;
+  --secondary-color: #8794ba;
+  --pink: #ef2a82;
+  --card-color: #0f1f4b;
+  --font-family: "Roboto", sans-serif;
+  --background: #eff2ff;
+  --line: #2a407c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  background-color: var(--background);
+  font-family: var(--font-family);
+  position: relative;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--primary-color);
+  width: 0.2rem;
+  &-thumb {
+    background-color: var(--pink);
+    border-radius: 1rem;
+  }
+}
